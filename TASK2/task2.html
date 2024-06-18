@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: rgb(250, 250, 142);
+        font-family: sans-serif;
+    }
+
+
+    .main{
+        border-bottom: 12px solid red;
+        font-style: italic;
+        text-align: center;
+        font-size: 30px;
+        color: rgb(250, 250, 142);
+        background-color: brown;
+    }
+
+    .what{
+        background-color: green;
+        padding-left: 10px;
+        color: white;
+    }
+
+    .list{
+        color: red;
+    }
+
+    .image{
+        border-style: dashed;
+        border-color: grey;
+        background-color: white;
+    }
+
+    .tables{
+        background-color: grey;
+    }
+
+    .random{
+        color: grey;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <div>My first web page</div>
+        
+        </div>
+
+    <div class="what">
+        <h4>What this is</h4>
+    </div>
+
+    <p>Welcome to my <i>first webpage.</i> I created this webpage without the assistance of a webpage editor. Just my little text editor and a keen <b>UNDERSTANDING OF HTML</b></p>
+
+    <div class="what">
+        <h4>Why this is</h4>
+    </div>
+
+    <i>
+    <ul class="list">
+        <li>To learn HTML</li>
+        <li>List element</li>
+        <ol>
+            <li>Home</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ol>
+        <li>Here I have created order and unordered list</li>
+    </ul> </i>
+
+    <div class="what">
+        <h4>ZeusLearning.com</h4>
+    </div>
+
+    <a href="https://www.zeuslearning.com/">This link will open zeuslearning.com in new tab</a>
+    
+    <div class="what">
+        <h4>On click of following image navigate to Google.com</h4>
+    </div>
+
+    <a href="https://www.google.com/"><img class="image" src="google.png" height="100px" width="100px" style="width: 150px"></a>
+
+    <h4 class="random">Some random table</h4>
+    <table class="tables" border="1">
+        <tr>
+            <td>Row 1, cell 1</td>
+            <td>Row 1, cell 2</td>
+            <td>Row 1, cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, cell 1</td>
+            <td>Row 2, cell 2</td>
+            <td>Row 2, cell 3</td>
+        </tr>    
+        <tr>
+            <td>Row 3, cell 1</td>
+            <td>Row 3, cell 2</td>
+            <td>Row 3, cell 3</td>
+        </tr>    
+        <tr>
+            <td>Row 4, cell 1</td>
+            <td>Row 4, cell 2</td>
+            <td>Row 4, cell 3</td>
+        </tr>    
+        </table>
+
+        <h4 class="random">Some random form</h4>
+    <p><strong><i>Note:</i></strong> It looks the part, but won't do anything</p>
+
+
+    <form name="myForms" onsubmit="return validateForm()">
+        Name: <br><br> <input type="text" id="x" name="fname" placeholder="Your name"> <br> <br>
+        Comments: <br> <br> <textarea rows="8" cols="16" name= "fname" placeholder="Your comments"></textarea> <br> <br>
+        Are you:<br> <br> <input type="radio" name="HTML">
+        <label>Male</label> <br> <BR>
+        <input type="radio" name="HTML"> 
+        <label>Female</label> <br> <br>
+        <input type="submit" value="Submit Query">
+    </form>
+
+
+    
+    <script>
+        function validateForm()
+        {
+            var x = document.forms["myForms"]["fname"].value;
+            console.log(x);
+            if(x===null || x==="" || x===" " || (!male && !female))
+            {
+                alert("All fields are Compulsory");
+                return false;
+
+            if(x==="") {
+                document.getElementById("x").focus();
+            }
+            else if(x==="") {
+                document.getElementById("x").focus();                
+            }
+            else if(!male && !female) {
+                document.getElementById("male").focus();                
+            }
+               return;             
+            }
+            alert("Form Submitted Successfully!");
+        }
+    </script>
+
+</body>
+</html>
